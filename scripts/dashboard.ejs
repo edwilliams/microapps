@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body class="bg-away-grey text-out-grey">
+    <main class="max-w-128 pt-2 px-2 m-auto">
+      <link rel="stylesheet" href="css/reset.css" />
+      <style>
+        body {
+          background: lightgray;
+          font-family: monospace;
+          padding: 20px;
+          font-size: 24px;
+        }
+      </style>
+      <h1 class="mb-2 tracking-widest font-display-sb">MicroApp Dashboard</h1>
+      <br />
+      <% microApps.forEach(function(app) { %>
+      <a class="no-underline" href="<%= app.url %>" data-app="<%= app.name %>">
+        <div><%= app.name %></div>
+      </a>
+      <% }); %>
+    </main>
+  </body>
+</html>

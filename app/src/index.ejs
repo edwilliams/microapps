@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="text/htmlcharset=utf-8" http-equiv="Content-Type" />
+    <meta name="theme-color" content="#58574B" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>MicroApp</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="js/runtime-generator.js"></script>
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/react-router-dom.development.js"></script>
+    <script src="js/microapps/microapp-libs.js"></script>
+    <script src="js/microapps/microapp-components.js"></script>
+
+    <%if (htmlWebpackPlugin.options.production) { %>
+    <script src="js/microapps/microapp-app.min.js"></script>
+    <% } else { %>
+    <script src="microapp-app.min.js"></script>
+    <% } %>
+  </body>
+</html>

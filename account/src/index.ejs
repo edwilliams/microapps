@@ -1,0 +1,32 @@
+<!-- NB: this file is needed for development and as a template for the Dashboard -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+    />
+    <title>MicroApp - Account</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="container" class="h-full"></div>
+    <script src="js/runtime-generator.js"></script>
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/react-router-dom.development.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/microapps/microapp-libs.js"></script>
+    <script src="js/microapps/microapp-components.js"></script>
+    <script>
+      window.onload = () => {
+        window.renderAccount('container')
+      }
+    </script>
+    <%if (htmlWebpackPlugin.options.isDashboard) { %>
+    <script src="js/microapps/microapp-account.min.js"></script>
+    <% } %>
+  </body>
+</html>

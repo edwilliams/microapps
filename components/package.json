@@ -1,0 +1,50 @@
+{
+  "name": "microapp-components",
+  "version": "1.0.0",
+  "description": "Components used by the MicroApp App and all its MicroApps",
+  "main": "dist/microapp-components.js",
+  "main-dev": "../static/js/microapps/microapp-components.js",
+  "scripts": {
+    "build": "rollup -c",
+    "postbuild": "node scripts/postbuild.js",
+    "start": "NODE_ENV=development rollup -c -w"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "prism-react-renderer": "^0.1.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.9.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-url": "^2.2.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "modules": false
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}

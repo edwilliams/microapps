@@ -1,0 +1,21 @@
+{
+  "name": "app-content",
+  "scripts": {
+    "start": "cd app && npm start && cd -",
+    "start:account": "cd account && npm start && cd -",
+    "build:dist": "node scripts/build-dist.js",
+    "build:dashboard": "node scripts/build-dashboard.js",
+    "build": "node scripts/build.js && npm run build:dashboard && npm run build:dist"
+  },
+  "devDependencies": {
+    "ejs": "^3.0.2",
+    "mkdirp": "^1.0.3"
+  },
+  "microApps": [
+    {
+      "id": "account",
+      "name": "Account",
+      "url": "account/#/account"
+    }
+  ]
+}
