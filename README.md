@@ -93,4 +93,4 @@ _NB this process should - and will one day - be automated with a script_
 
 - create script in package.json for creating new microapp
 - look into replacing webpack w/ snowpack or similar
-- The `.babelrc` files and `scripts` folders are all the same for all MicroApps and the Parent App. There could be some refactoring here.
+- The `scripts` folders are all the same for all MicroApps and the Parent App. There could be some refactoring here.
