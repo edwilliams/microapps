@@ -65,12 +65,10 @@ The rationale behind MicroApps is:
 
 The following commands can be executed in the root folder (e.g. npm run start:app)
 
-- `start:app`: Runs the main "parent" App
+- `start`: Runs the main "parent" App
 - `start:account`: Runs the Account MicroApp
-- `build:components`: Build during development before seeing component changes in app or microapp
-- `build:libs`: Build during development before seeing library changes in app or microapp
-- `build:dashboard`: Builds the MicroApp Dashboard (for QA / internal)
 - `build:dist`: Builds the folder that gets deployed
+- `build:dashboard`: Builds the MicroApp Dashboard (for QA / internal)
 - `build`: Installs and build all libs, components, microapps and parent app
 
 ---
