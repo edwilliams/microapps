@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "ejs": "^3.0.2",
-    "mkdirp": "^1.0.3"
+    "mkdirp": "^1.0.3",
+    "rimraf": "^3.0.2"
   },
   "microApps": [
     {

@@ -3,7 +3,7 @@
 const rimraf = require('rimraf')
 
 const init = async () => {
-  rimraf.sync('dist')
+  rimraf.sync(`${process.env.NAME}/dist`)
 }
 
 init()
