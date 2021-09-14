@@ -77,14 +77,14 @@ The following commands can be executed in the root folder (e.g. npm run start:ap
 
 _NB this process should - and will one day - be automated with a script_
 
-- copy a microapp folder (e.g. `account`)
-- webpack.config.js: change `id`
-- root package.json: add object to `apps` array and add scripts
-- microapp package.json: change `name` and `port` number and remove any unneeded deps
+- copy existing microapp folder (e.g. `account`)
+- new microapp `webpack.config.js`: change `id`
+- in root `package.json`: add object to `apps` array and add start script
+- in microapp `package.json`: change `name` and `port` number (and remove any unneeded dependencies)
 - `[microapp]/app.js`: make appropriate content / route changes
 - `app/app.js`: add new routes as above (so the microapp can be called from the parent)
 - `index.js`: change render and mount functions
-- `index.ejs`: change title; `window.renderFoo`; script at bottom of page
+- `index.ejs`: change title; change `onload` script (i.e. `window.onload = () => {window.renderAccount('container')`); change `src` of script tag at bottom of page
 - `[microapp]/container`: make changes as needed
 
 ---
