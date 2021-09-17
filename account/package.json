@@ -2,7 +2,7 @@
   "name": "microapp-account",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --port 8081",
+    "start": "webpack-dev-server --open --mode development",
     "prebuild": "cd .. && NAME=account node ./scripts/prebuild.js",
     "build": "webpack --mode production",
     "postbuild": "cd .. && NAME=account node scripts/postbuild.js"

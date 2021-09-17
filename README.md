@@ -78,11 +78,27 @@ The following commands can be executed in the root folder (e.g. npm run start:ap
 _NB this process should - and will one day - be automated with a script_
 
 - copy existing microapp folder (e.g. `account`)
-- new microapp `webpack.config.js`: change `id`
-- in root `package.json`: add object to `apps` array and add start script
-- in microapp `package.json`: change `name` and `port` number (and remove any unneeded dependencies)
-- `[microapp]/app.js`: make appropriate content / route changes
-- `app/app.js`: add new routes as above (so the microapp can be called from the parent)
-- `index.js`: change render and mount functions
-- `index.ejs`: change title; change `onload` script (i.e. `window.onload = () => {window.renderAccount('container')`); change `src` of script tag at bottom of page
-- `[microapp]/container`: make changes as needed
+
+**In parent App**
+
+- `src/app.js`: create new route with `<MicroApp/>` component
+- `package.json`: add new object to `apps` array and add start script. e.g.
+
+```JSON
+{
+  "id": "messages",
+  "name": "Messages",
+  "url": "messages/#/messages"
+}
+```
+
+**Create new MicroApp called Messages**
+
+- `webpack.config.js`: rename `id` to "messages"
+- `package.json`: rename `name` in name field - and in `prebuild` and `postbuild` scripts - to "messages" (and remove any unneeded dependencies)
+- `app.js`: rename route to "messages" and remove unwated content
+- `index.js`: rename render and mount functions (`renderMessages` and `unmountMessages`)
+- `index.ejs`:
+  - rename title to "messages"
+  - change `onload` script (i.e. `window.onload = () => {window.renderMessages('container')`)
+  - change `src` of script tag (i.e. `microapp-messages.min.js`)
