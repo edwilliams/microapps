@@ -2,7 +2,7 @@
 
 <img src="logo.png"/>
 
-Demo: [mycroapps.netlify.app](mycroapps.netlify.app)
+Demo: [mycroapps.netlify.app](https://mycroapps.netlify.app/)
 
 ---
 
