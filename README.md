@@ -1,5 +1,7 @@
 ## MycroApps
 
+<img src="logo.png"/>
+
 Demo: [mycroapps.netlify.app](mycroapps.netlify.app)
 
 ---
@@ -20,31 +22,11 @@ The rationale behind MicroApps is:
 
 ### MicroApps - How? (_contrived run time example_)
 
-```html
-<body>
-  <!-- These scripts don't render anything immediately -->
-  <!-- Instead they attach entry-point functions to `window` -->
-  <script src="http://example.com/app.min.js"></script>
-  <script src="http://example.com/account.min.js"></script>
-  <script src="http://example.com/messages.min.js"></script>
+- iFrames: Isolated Apps (comms with postMessage)
+- Build time: Private NPM packages (or hosted registries)
+- Run time: Parent App consumes MicroApp via Javascript files
 
-  <div id="micro-frontend-root"></div>
-
-  <script type="text/javascript">
-    // These global functions are attached to window by the above scripts
-    const microFrontendsByRoute = {
-      '/': window.renderHome,
-      '/account': window.renderHotwater,
-      '/messages': window.renderMessages
-    }
-    const renderFunction = microFrontendsByRoute[window.location.pathname]
-
-    // Having determined the entry-point function, we now call it,
-    // giving it the ID of the element where it should render itself
-    renderFunction('micro-frontend-root')
-  </script>
-</body>
-```
+MycroApps uses a runtime approach (see contrived example [here](./runtime-demo))
 
 ---
 

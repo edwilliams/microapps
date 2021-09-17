@@ -1,0 +1,22 @@
+<body>
+  <!-- These scripts don't render anything immediately -->
+  <!-- Instead they attach entry-point functions to `window` -->
+  <script src="./app.js"></script>
+  <script src="./messages.js"></script>
+
+  <div id="micro-frontend-root"></div>
+
+  <script>
+    // These global functions are attached to window by the above scripts
+    const microFrontendsByRoute = {
+      '': window.renderApp,
+      '#/messages': window.renderMessages
+    }
+
+    const renderFunction = microFrontendsByRoute[window.location.hash]
+
+    // Having determined the entry-point function, we now call it,
+    // giving it the ID of the element where it should render itself
+    renderFunction('micro-frontend-root')
+  </script>
+</body>
