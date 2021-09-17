@@ -57,7 +57,7 @@ The following commands can be executed in the root folder (e.g. npm run start:ap
 
 ---
 
-### To create new microapp
+### How to create new microapp called, for example, "Messages"
 
 _NB this process should - and will one day - be automated with a script_
 
@@ -76,7 +76,7 @@ _NB this process should - and will one day - be automated with a script_
 }
 ```
 
-**Create new MicroApp called Messages**
+**In MicroApp**
 
 - `webpack.config.js`: rename `id` to "messages"
 - `package.json`: rename `name` in name field - and in `prebuild` and `postbuild` scripts - to "messages" (and remove any unneeded dependencies)
