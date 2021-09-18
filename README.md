@@ -20,7 +20,7 @@ The rationale behind MicroApps is:
 
 ---
 
-### MicroApps - How? (_contrived run time example_)
+### MicroApps - How?
 
 - iFrames: Isolated Apps (comms with postMessage)
 - Build time: Private NPM packages (or hosted registries)
@@ -47,7 +47,7 @@ MycroApps uses a runtime approach (see contrived example [here](./runtime-demo))
 
 ### Commands
 
-The following commands can be executed in the root folder (e.g. npm run start:app)
+The following commands can be executed in the root folder
 
 - `start`: Runs the main "parent" App
 - `start:account`: Runs the Account MicroApp
