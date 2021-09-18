@@ -8,12 +8,12 @@
 
   <script>
     // These global functions are attached to window by the above scripts
-    const microFrontendsByRoute = {
+    const microAppsByRoute = {
       '': window.renderApp,
       '#/messages': window.renderMessages
     }
 
-    const renderFunction = microFrontendsByRoute[window.location.hash]
+    const renderFunction = microAppsByRoute[window.location.hash]
 
     // Having determined the entry-point function, we now call it,
     // giving it the ID of the element where it should render itself
