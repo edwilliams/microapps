@@ -53,7 +53,7 @@ MycroApps uses a monorepo and runtime approach (see contrived example [here](./r
 **Development**
 
 - `npm install`
-- `npm start` (_NB `npm run build` needs to be run first_)
+- `npm start`
 
 **Production**
 

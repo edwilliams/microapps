@@ -1,6 +1,7 @@
 {
   "name": "app-content",
   "scripts": {
+    "postinstall": "node scripts/postinstall.js",
     "start": "cd app && npm start && cd -",
     "start:account": "cd account && npm start && cd -",
     "build:dist": "node scripts/build-dist.js",
